@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Discover the best artificial intelligence tools for writing, images, video, music, coding and productivity.">
+<title>NEXORA AI — Explore Artificial Intelligence</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#09090e;color:#fff;font-family:Arial,sans-serif}
+header{height:72px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #292933;position:sticky;top:0;background:#0c0c12;z-index:10}
+.logo{font-size:24px;font-weight:900;letter-spacing:2px}
+.logo span,.red{color:#ff304f}
+nav a{color:#ccc;text-decoration:none;margin-left:20px;font-size:14px}
+nav a:hover{color:#ff304f}
+.hero{
+text-align:center;
+padding:75px 16px 40px;
+background:
+linear-gradient(90deg,rgba(9,9,14,.96),rgba(9,9,14,.68) 55%,rgba(9,9,14,.2)),
+url('hero.jpg') center 35%/cover no-repeat;
+}
+.tag{border:1px solid #783044;border-radius:30px;padding:9px 15px;color:#ff657c;font-size:11px;letter-spacing:1px}
+h1{font-size:clamp(35px,7vw,65px);margin:28px 0 12px;letter-spacing:-2px}
+h1 span{color:#ff304f}
+.hero p{color:#aaa;line-height:1.8}
+.search{max-width:620px;margin:28px auto}
+.search input{width:100%;padding:18px;background:#171720;border:1px solid #383844;border-radius:12px;color:white;font-size:16px;outline:none}
+.search input:focus{border-color:#ff304f}
+.stats{display:flex;justify-content:center;gap:45px;color:#999;font-size:12px}
+.stats b{display:block;color:white;font-size:21px;margin-bottom:5px}
+main{max-width:1200px;margin:auto;padding:25px 20px}
+.heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.heading h2{font-size:25px}
+#count{color:#999;font-size:13px}
+.categories{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0 28px}
+.categories button{border:1px solid #30303a;background:#17171f;color:#bbb;padding:10px 15px;border-radius:25px;cursor:pointer}
+.categories button:hover,.categories button.active{background:#ff304f;color:white;border-color:#ff304f}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:17px}
+.card{background:linear-gradient(145deg,#191922,#111117);border:1px solid #2c2c37;border-radius:15px;padding:20px;display:flex;flex-direction:column;transition:.2s;min-height:230px}
+.card:hover{transform:translateY(-4px);border-color:#ff304f}
+.cardtop{display:flex;align-items:center;gap:12px}
+.icon{width:46px;height:46px;display:grid;place-items:center;background:#29202a;border-radius:12px;font-size:25px;flex-shrink:0}
+.card h3{font-size:17px;margin:0}
+.category{font-size:10px;color:#ff647b;text-transform:uppercase;letter-spacing:1px;margin-top:5px}
+.card p{color:#aaa;font-size:13px;line-height:1.65;flex:1}
+.visit{display:inline-block;text-align:center;text-decoration:none;background:#ff304f;color:white;padding:11px 14px;border-radius:8px;font-size:13px;font-weight:bold}
+.visit:hover{background:#d51d3c}
+.empty{display:none;text-align:center;padding:45px;color:#aaa}
+.about{margin:60px 0 20px;padding:35px;background:#15151e;border:1px solid #292933;border-radius:16px;text-align:center}
+.about p{color:#aaa;line-height:1.8}
+footer{text-align:center;border-top:1px solid #292933;padding:30px;color:#888;font-size:13px}
+footer .logo{margin-bottom:12px}
+@media(max-width:550px){header{padding:0 14px}nav a{margin-left:9px;font-size:12px}.hero{padding-top:55px}.stats{gap:22px}.card{min-height:210px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">NEXORA<span> AI.</span></div>
+<nav>
+<a href="#">Home</a>
+<a href="#tools">Explore</a>
+<a href="#about">About</a>
+</nav>
+</header>
+
+<section class="hero">
+<span class="tag">✦ YOUR AI DISCOVERY PLATFORM</span>
+<h1>Explore the <span>World of AI.</span></h1>
+<p>Discover powerful artificial intelligence tools.<br>Find the right tool for every idea, task and project.</p>
+<div class="search">
+<input id="search" placeholder="⌕  Search 50+ AI tools..." autocomplete="off">
+</div>
+<div class="stats">
+<div><b id="total">50+</b>AI Tools</div>
+<div><b>08</b>Categories</div>
+<div><b>∞</b>Possibilities</div>
+</div>
+</section>
+
+<main id="tools">
+<div class="heading">
+<h2>Explore AI Tools</h2>
+<span id="count">Loading tools...</span>
+</div>
+
+<div class="categories" id="categories">
+<button class="active" data-filter="all">✦ All Tools</button>
+<button data-filter="chat">🤖 Chat AI</button>
+<button data-filter="research">🔎 Research</button>
+<button data-filter="image">🎨 Images</button>
+<button data-filter="video">🎬 Video</button>
+<button data-filter="audio">🎵 Audio</button>
+<button data-filter="coding">💻 Coding</button>
+<button data-filter="productivity">⚡ Productivity</button>
+<button data-filter="writing">✍ Writing</button>
+</div>
+
+<div class="grid" id="grid"></div>
+<div class="empty" id="empty">No tools found. Try another search.</div>
+
+<section class="about" id="about">
+<h2>About <span class="red">NEXORA AI</span></h2>
+<p>Your gateway to artificial intelligence.<br>
+Discover tools for creativity, productivity, learning and innovation.<br>
+One platform. Endless possibilities.</p>
+</section>
+</main>
+
+<footer>
+<div class="logo">NEXORA<span> AI.</span></div>
+<p>Discover. Create. Innovate.</p>
+<p>© 2026 NEXORA AI. All rights reserved.</p>
+</footer>
+
+<script>
+const tools = [
+["ChatGPT","🤖","chat","AI assistant","Helps you write, learn, brainstorm, analyze and create content.","https://chatgpt.com/"],
+["Claude","🧠","chat","AI assistant","Helps with writing, reasoning, document analysis and coding.","https://claude.ai/"],
+["Google Gemini","✨","chat","AI assistant","Google's AI assistant for questions, ideas, writing and more.","https://gemini.google.com/"],
+["Microsoft Copilot","💠","chat","AI assistant","Helps with questions, writing, ideas and Microsoft-related tasks.","https://copilot.microsoft.com/"],
+["DeepSeek","🔍","chat","AI assistant","AI chatbot useful for reasoning, explanations and programming.","https://chat.deepseek.com/"],
+["Mistral Le Chat","🌟","chat","AI assistant","Conversational AI for answering questions and working with ideas.","https://chat.mistral.ai/"],
+["Meta AI","🔵","chat","AI assistant","AI assistant for conversations, questions and creative ideas.","https://www.meta.ai/"],
+["Poe","💬","chat","AI platform","Explore different AI chatbots and create custom bots.","https://poe.com/"],
+["Grok","⚡","chat","AI assistant","AI assistant for conversations, explanations and ideas.","https://grok.com/"],
+
+["Perplexity","🔎","research","AI research","Search the web and get answers with links to supporting sources.","https://www.perplexity.ai/"],
+["NotebookLM","📚","research","Study & research","Explore your own documents and create source-based summaries.","https://notebooklm.google.com/"],
+["Consensus","🎓","research","Research","Find and explore answers based on scientific research papers.","https://consensus.app/"],
+["Elicit","🧪","research","Research","Helps discover academic papers and organize research findings.","https://elicit.com/"],
+["Scite","📖","research","Research","Explore scientific articles and how other papers cite them.","https://scite.ai/"],
+["Semantic Scholar","🔬","research","Academic search","Search academic papers and discover related scientific research.","https://www.semanticscholar.org/"],
+
+["Midjourney","🎨","image","Image generation","Creates artistic images from written descriptions.","https://www.midjourney.com/"],
+["Leonardo AI","🖼️","image","Image generation","Creates AI artwork, illustrations and visual assets.","https://leonardo.ai/"],
+["Adobe Firefly","🔥","image","Image generation","Generates and edits creative images using AI tools.","https://firefly.adobe.com/"],
+["Ideogram","💡","image","Image generation","Creates images and designs, including visuals with text.","https://ideogram.ai/"],
+["Canva AI","🌈","image","Design","Helps create graphics, presentations and visual designs.","https://www.canva.com/"],
+["Recraft","🪄","image","Graphic design","Creates illustrations, icons and design assets.","https://www.recraft.ai/"],
+["Playground","🧩","image","Image creation","Explore AI image creation and visual editing.","https://playground.com/"],
+["Krea AI","✨","image","Creative AI","Explore AI image generation, enhancement and creative workflows.","https://www.krea.ai/"],
+["Remove.bg","✂️","image","Image editing","Removes image backgrounds automatically.","https://www.remove.bg/"],
+
+["Runway","🎬","video","Video generation","Creates and edits videos using generative AI tools.","https://runwayml.com/"],
+["Kling AI","🎥","video","Video generation","Turns ideas and images into AI-generated video clips.","https://klingai.com/"],
+["Pika","🌠","video","Video generation","Creates short creative videos from prompts and images.","https://pika.art/"],
+["Luma AI","🌌","video","Video generation","Creates videos and explores AI-powered visual experiences.","https://lumalabs.ai/"],
+["HeyGen","🗣️","video","AI avatars","Creates videos with AI avatars and virtual presenters.","https://www.heygen.com/"],
+["Synthesia","👨‍🏫","video","AI presenters","Creates presenter-style videos from written scripts.","https://www.synthesia.io/"],
+["CapCut","✂️","video","Video editing","Edits videos and provides AI-assisted creative features.","https://www.capcut.com/"],
+["InVideo AI","📽️","video","Video creation","Helps turn written ideas and scripts into videos.","https://invideo.io/"],
+
+["ElevenLabs","🎙️","audio","AI voice","Generates realistic AI speech and helps with voice projects.","https://elevenlabs.io/"],
+["Suno","🎵","audio","AI music","Creates music and songs from written descriptions.","https://suno.com/"],
+["Adobe Podcast","🎧","audio","Audio editing","Helps improve speech recordings and audio quality.","https://podcast.adobe.com/"],
+["Descript","🎤","audio","Audio & video editing","Edits recordings and videos using text-based editing tools.","https://www.descript.com/"],
+["Auphonic","🔊","audio","Audio enhancement","Automatically improves and balances audio recordings.","https://auphonic.com/"],
+["Speechify","📢","audio","Text to speech","Reads written text aloud using AI voices.","https://speechify.com/"],
+
+["Cursor","💻","coding","AI coding","AI-powered code editor that helps developers write and understand code.","https://cursor.com/"],
+["GitHub Copilot","🐙","coding","AI coding","Suggests code and helps programmers understand programming tasks.","https://github.com/features/copilot"],
+["Replit","🚀","coding","App development","Build and experiment with software projects using online tools.","https://replit.com/"],
+["Windsurf","🏄","coding","AI coding","AI-assisted coding environment for software development.","https://windsurf.com/"],
+["Lovable","💜","coding","Website creation","Helps turn written ideas into website and app prototypes.","https://lovable.dev/"],
+["Bolt","⚡","coding","App development","Build web applications from natural-language descriptions.","https://bolt.new/"],
+["v0","🧱","coding","UI development","Generates website interfaces and frontend code from prompts.","https://v0.app/"],
+
+["Gamma","📊","productivity","Presentations","Creates presentations, documents and visual pages from ideas.","https://gamma.app/"],
+["Notion AI","📝","productivity","Organization","Helps summarize notes, write content and organize projects.","https://www.notion.com/product/ai"],
+["Zapier","🔗","productivity","Automation","Connects apps and automates repetitive digital tasks.","https://zapier.com/"],
+["Make","⚙️","productivity","Automation","Builds visual workflows that connect different online services.","https://www.make.com/"],
+["n8n","🔄","productivity","Automation","Creates customizable workflows between apps and services.","https://n8n.io/"],
+["Napkin AI","🖍️","productivity","Visual communication","Turns written ideas into diagrams and visual explanations.","https://www.napkin.ai/"],
+
+["Grammarly","✍️","writing","Writing assistant","Checks grammar, spelling, clarity and writing style.","https://www.grammarly.com/"],
+["QuillBot","📄","writing","Writing assistant","Helps paraphrase text, summarize and improve writing.","https://quillbot.com/"],
+["DeepL","🌍","writing","Translation","Translates text between languages and helps improve phrasing.","https://www.deepl.com/"],
+["Jasper","🖋️","writing","Content writing","Helps create marketing content and written material.","https://www.jasper.ai/"],
+["Copy.ai","📋","writing","Content writing","Assists with marketing copy and business writing workflows.","https://www.copy.ai/"]
+];
+
+const grid=document.getElementById("grid");
+const search=document.getElementById("search");
+const count=document.getElementById("count");
+const empty=document.getElementById("empty");
+let active="all";
+
+function render(){
+ const q=search.value.trim().toLowerCase();
+ const filtered=tools.filter(t=>
+ (active==="all"||t[2]===active)&&
+ t.join(" ").toLowerCase().includes(q)
+ );
+ grid.innerHTML=filtered.map(t=>`
+ <article class="card">
+  <div class="cardtop">
+   <div class="icon">${t[1]}</div>
+   <div><h3>${t[0]}</h3><div class="category">${t[3]}</div></div>
+  </div>
+  <p>${t[4]}</p>
+  <a class="visit" href="${t[5]}" target="_blank" rel="noopener noreferrer">Visit Official Website ↗</a>
+ </article>
+ `).join("");
+ count.textContent=filtered.length+" tools found";
+ empty.style.display=filtered.length?"none":"block";
+ grid.style.display=filtered.length?"grid":"none";
+}
+document.querySelectorAll(".categories button").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  document.querySelectorAll(".categories button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  active=btn.dataset.filter;
+  render();
+ });
+});
+search.addEventListener("input",render);
+document.getElementById("total").textContent=tools.length+"+";
+render();
+</script>
+</body>
+</html>
